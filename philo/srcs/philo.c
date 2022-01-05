@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jgyles <jgyles@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 17:45:20 by jgyles            #+#    #+#             */
-/*   Updated: 2021/12/08 12:58:48 by jgyles           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "philo.h"
 
 void	*simulation(void *ph)
@@ -109,6 +97,8 @@ void	philo(t_data *data)
 
 	ph = malloc(sizeof(t_philo) * data->number_of_philosophers);
 	mutexes = malloc(sizeof(pthread_mutex_t) * data->number_of_philosophers);
+	if(!ph || !mutexes)
+		print_err(ERROR);
 	if (ph && mutexes)
 	{
 		init_fork(data, &ph, &mutexes);

@@ -1,4 +1,4 @@
-#include "philo.h"
+#include "philosophers.h"
 
 int	main(int argc, char **argv)
 {
@@ -6,7 +6,7 @@ int	main(int argc, char **argv)
 
 	if (argc == 5 || argc == 6)
 	{
-		if (init(argv, &data))
+		if (ctruct_init(argv, &data))
 			philo(&data);
 	}
 	else

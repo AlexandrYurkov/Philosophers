@@ -1,21 +1,9 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   print.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jgyles <jgyles@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 15:46:28 by jgyles            #+#    #+#             */
-/*   Updated: 2021/12/06 16:14:19 by jgyles           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "philo.h"
 
 void	echo(int flag, char *str, uint64_t time, t_philo *ph)
 {
 	pthread_mutex_lock(&ph->data->output);
-	printf("%lldms %d philo %s", time, ph->id + 1, str);
+	printf("%ldms %d philo %s", time, ph->id + 1, str);
 	if (flag)
 		pthread_mutex_unlock(&ph->data->output);
 }
