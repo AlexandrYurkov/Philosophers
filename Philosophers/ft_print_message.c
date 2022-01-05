@@ -3,7 +3,7 @@
 void	ft_echo(int f, char *s, uint64_t time, t_philo *ph)
 {
 	pthread_mutex_lock(&ph->data->output);
-	printf("%ld ms %d philosophrs %s", time, ph->id + 1, s);
+	printf("%llu ms %d philosophrs %s", time, ph->id + 1, s);
 	if (f)
 		pthread_mutex_unlock(&ph->data->output);
 }

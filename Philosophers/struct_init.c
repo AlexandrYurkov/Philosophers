@@ -13,6 +13,6 @@ int	struct_init(char **argv, t_data *data)
 	if (data->num_of_phil == 0 || data->must_eat == 0
 		|| data->num_of_phil > 200 || data->time_die < 60
 		|| data->time_eat < 60 || data->time_sleep < 60)
-		print_err(ERROR_DATA);
+		ft_error(ERROR_DATA);
 	return (1);
 }

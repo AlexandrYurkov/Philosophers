@@ -48,12 +48,12 @@ void		ft_error(char *str);
 uint64_t	find_the_time(void);
 uint64_t	actual_time(uint64_t now_time, uint64_t start);
 void		ft_echo(int f, char *s, uint64_t time, t_philo *ph);
-// остановился тут
-void		philo(t_data *data);
-void		free_threads(pthread_t **treads, t_data *data, int flag);
-void		usleep_fixed(uint64_t time);
-void		eating(t_philo *ph);
-void		sleeping(t_philo *ph);
-void		thinking(t_philo *ph);
+void 		philos (t_data *data);
+void 		ft_free(t_data *data, pthread_t **potok, int f);
+//
+void		check_usleep(uint64_t time);
+void		ft_eat(t_philo *p);
+void		ft_sleep(t_philo *p);
+void		ft_brain(t_philo *p);
 
 #endif
